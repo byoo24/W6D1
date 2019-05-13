@@ -6,6 +6,8 @@ Function.prototype.inherits = function(Parent) {
 };
 
 
+
+
 function MovingObject(name) { 
     this.name = name;
 
@@ -28,3 +30,8 @@ Ship.inherits(MovingObject);
 Asteroid.inherits(MovingObject);
 
 console.log(Ship.prototype);
+
+
+// Ship.prototype = Object.create(MovingObject.prototype);
+// Asteroid.prototype = Object.create(MovingObject.prototype);
+
