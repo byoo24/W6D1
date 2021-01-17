@@ -1,18 +1,19 @@
 import React from 'react'
 import Header from './Header'
-import { ThemeProvider } from 'styled-components'
 
+import { Nav } from '@components'
 
 import { GlobalStyle } from '@styles'
 
 
 
-const Layout = (props) => {
+const layout = (props) => {
 
     return (<>
         <GlobalStyle />
 
         <Header />
+        <Nav />
 
         <div id="root">
             {props.children}
@@ -20,4 +21,4 @@ const Layout = (props) => {
     </>)
 }
 
-export default Layout;
+export default layout;
