@@ -1,14 +1,19 @@
 import React from 'react'
+import { navLinks } from '@config'
+import { Logo } from '@icons'
 
 
 const Nav = () => {
 
     return (
         <div>
+            <Logo />
             <ol>
-                {['About', 'Experience', 'Projects'].map(text => {
-                    return <li>{text}</li>
-                })}
+                {navLinks.map(({name, url}, i) => (
+                    <li key={i}>
+                        <a href={url}>{name}</a>
+                    </li>
+                ))}
             </ol>
         </div>
     )
