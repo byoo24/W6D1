@@ -16,6 +16,19 @@ const GlobalStyle = createGlobalStyle`
         --color-mosque: #025E73;
         --color-summer-creme: #F2D95C;
         --color-cream-can: #F2C166;
+
+        --color-bg: var(--color-bunting);
+        --color-primary: var(--color-summer-creme);
+
+        --font-sans: 'Open Sans', serif;
+        --font-mono: 'Roboto Mono', arial;
+    }
+
+    body {
+        font-size: 14px;
+        background-color: var(--color-bg);
+        color: var(--color-primary);
+        font-family: var(--font-sans);
     }
 `
 
