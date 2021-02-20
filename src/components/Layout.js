@@ -1,22 +1,24 @@
 import React from 'react'
-import Header from './Header'
+import Head from './Head'
+import { ThemeProvider } from 'styled-components'
 
 import { Nav } from '@components'
-
-import { GlobalStyle } from '@styles'
+import { GlobalStyle, theme } from '@styles'
 
 
 
 const Layout = (props) => {
 
     return (<>
-        <GlobalStyle />
-
-        <Header />
-        <Nav />
+        <Head />
 
         <div id="root">
-            {props.children}
+            <ThemeProvider theme={theme}>
+                <GlobalStyle />
+                <Nav />
+                
+                {props.children}
+            </ThemeProvider>
         </div>
     </>)
 }

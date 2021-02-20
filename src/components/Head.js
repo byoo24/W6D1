@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 
-const Header = (props) => {
+const Head = (props) => {
     return (
         <Helmet title="test">
             <html lang="en" />
@@ -10,4 +10,4 @@ const Header = (props) => {
     )
 }
 
-export default Header;
+export default Head;

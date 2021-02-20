@@ -1,4 +1,4 @@
 module.exports = {
-    navDelay: 1000,
+    navDelay: 300,
     transitionDuration: 300,
 }
