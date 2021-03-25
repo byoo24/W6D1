@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import Reset from '@styles'
+import Reset from './reset'
 import Fonts from './fonts'
 
 
@@ -11,20 +11,20 @@ const GlobalStyle = createGlobalStyle`
     ${Fonts};
 
     :root {
-        --color-bunting: #111D40;
+        --color-dark-blue: #041733;
         --color-regal-blue: #025373;
         --color-mosque: #025E73;
         --color-summer-creme: #F2D95C;
         --color-cream-can: #F2C166;
 
-        --color-bg: var(--color-bunting);
+        --color-bg: var(--color-dark-blue);
         --color-primary: var(--color-summer-creme);
 
         --font-sans: 'Open Sans', serif;
         --font-mono: 'Roboto Mono', arial;
     }
 
-    body {
+    #root {
         font-size: 14px;
         background-color: var(--color-bg);
         color: var(--color-primary);
