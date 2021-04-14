@@ -2,33 +2,66 @@ import React, { useState, useEffect } from 'react'
 import { navLinks } from '@config'
 import { Logo } from '@icons'
 import { navDelay } from '@util'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+
+
+const StyledNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const StyledList = styled.ol`
+  display: flex;
+  margin: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    margin-right: 5px;
+    counter-increment: item 1;
+
+    a {
+      padding: 10px;
+      text-decoration: none;
+
+      &::before {
+        content: '0' counter(item) '.';
+        color: var(--color-yellow);
+        margin-right: 5px;
+      }
+    }
+  }
+`
 
 
 const Nav = () => {
-    const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setIsMounted(true);
-        }, navDelay);
+  useEffect(() => {
+      const timeout = setTimeout(() => {
+          setIsMounted(true);
+      }, navDelay);
 
-        return () => {
-            clearTimeout(timeout);
-        }
-    }, []);
+      return () => {
+          clearTimeout(timeout);
+      }
+  }, []);
 
-    return (
-        <div>
-            <Logo />
-            <ol>
-                {navLinks.map(({name, url}, i) => (
-                    <li key={i}>
-                        <a href={url}>{name}</a>
-                    </li>
-                ))}
-            </ol>
-        </div>
-    )
+  return (
+    <StyledNav>
+        <Logo />
+
+        <StyledList>
+            {navLinks.map(({name, url}, i) => (
+                <li key={i}>
+                    <Link href={url}>{name}</Link>
+                </li>
+            ))}
+        </StyledList>
+    </StyledNav>
+  )
 }
 
 

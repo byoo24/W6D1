@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components"
+import { css } from "styled-components"
 
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
-const Reset = css`
+const reset = css`
     html {
         font-family: sans-serif;
         -ms-text-size-adjust: 100%;
@@ -626,4 +626,4 @@ const Reset = css`
     }
 `;
 
-export default Reset
+export default reset
