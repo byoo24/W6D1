@@ -16,10 +16,12 @@ const globalStyle = createGlobalStyle`
     --color-teal: #025E73;
     --color-yellow: #F2D95C;
     --color-orange: #F2C166;
-    --color-white: #dadada;
+    --color-white: #e2e5ff;
+    --color-gray: #afb3cf;
 
     --color-bg: var(--color-dark-blue);
-    --color-primary: var(--color-white);
+    --color-main: var(--color-white);
+    --color-text: var(--color-gray);
     --color-highlight: var(--color-yellow);
 
     --font-sans: 'Open Sans', serif;
@@ -29,12 +31,16 @@ const globalStyle = createGlobalStyle`
   #root {
     font-size: 14px;
     background-color: var(--color-bg);
-    color: var(--color-primary);
+    color: var(--color-text);
     font-family: var(--font-sans);
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-main);
+  }
+
   a {
-    color: var(--color-primary);
+    color: var(--color-main);
     text-decoration: none;
 
     &:hover {

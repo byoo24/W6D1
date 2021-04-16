@@ -14,7 +14,7 @@ const theme = {
   },
 
   container: {
-    large: 1400,
+    large: 1600,
   }
 }
 

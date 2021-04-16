@@ -35,6 +35,11 @@ const StyledList = styled.ol`
   }
 `
 
+const StyledLogo = styled.div`
+  ${p => p.theme.mixins.flexCenter}
+  width: 50px;
+`
+
 
 const Nav = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -51,7 +56,9 @@ const Nav = () => {
 
   return (
     <StyledNav>
-        <Logo />
+        <StyledLogo>
+          <Logo />
+        </StyledLogo>
 
         <StyledList>
             {navLinks.map(({name, url}, i) => (
